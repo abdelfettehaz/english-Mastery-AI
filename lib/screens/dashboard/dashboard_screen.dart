@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../core/theme/colors.dart';
 import '../../widgets/top_bar.dart';
 import '../../widgets/bottom_nav.dart';
@@ -45,7 +46,7 @@ class DashboardScreen extends StatelessWidget {
                     const SizedBox(height: 28),
 
                     // Daily Progress Card
-                    _buildDailyProgress(context).animate().delay(100.ms).fadeIn().slideY(begin: 0.1, end: 0),
+                    _buildDailyProgress(context).animate().fadeIn(delay: 100.ms).slideY(begin: 0.1, end: 0),
                     const SizedBox(height: 24),
 
                     // Quick Actions
@@ -57,12 +58,12 @@ class DashboardScreen extends StatelessWidget {
                         _buildActionButton(context, 'AI Tutor', Symbols.smart_toy, null, () => context.go('/chat'), isSecondary: true),
                         _buildActionButton(context, 'Notes', Symbols.description, null, () => context.go('/notes'), isGhost: true),
                       ],
-                    ).animate().delay(150.ms).fadeIn().slideY(begin: 0.1, end: 0),
+                    ).animate().fadeIn(delay: 150.ms).slideY(begin: 0.1, end: 0),
                     const SizedBox(height: 32),
 
                     // Focused Disciplines
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceOfBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Focused Disciplines', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
                         TextButton(onPressed: () {}, child: const Text('View All')),
@@ -82,13 +83,13 @@ class DashboardScreen extends StatelessWidget {
                         _buildModuleCard(context, 'Speaking', 'Pronunciation', 0.82, Symbols.record_voice_over, const Color(0xFF006573), const Color(0x33A1EFFF)),
                         _buildModuleCard(context, 'Writing', 'Essay Craft', 0.31, Symbols.edit, const Color(0xFF1F4A6C), const Color(0x33CEE5FF)),
                       ],
-                    ).animate().delay(200.ms).fadeIn(),
+                    ).animate().fadeIn(delay: 200.ms),
                     const SizedBox(height: 32),
 
                     // Recent Activity
                     Text('Recent Activity', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
                     const SizedBox(height: 16),
-                    _buildRecentActivityList(context).animate().delay(350.ms).fadeIn(),
+                    _buildRecentActivityList(context).animate().fadeIn(delay: 350.ms),
                   ],
                 ),
               ),

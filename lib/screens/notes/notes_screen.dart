@@ -93,7 +93,7 @@ class _NotesScreenState extends State<NotesScreen> {
                       itemCount: _notes.length,
                       itemBuilder: (context, i) {
                         final note = _notes[i];
-                        return _buildNoteCard(note).animate().delay((i * 80).ms).fadeIn();
+                        return _buildNoteCard(note).animate().fadeIn(delay: (i * 80).ms);
                       },
                     ),
                   ],

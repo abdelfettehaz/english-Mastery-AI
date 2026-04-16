@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import 'package:material_symbols_icons/symbols.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../core/theme/colors.dart';
 import '../../widgets/top_bar.dart';
 

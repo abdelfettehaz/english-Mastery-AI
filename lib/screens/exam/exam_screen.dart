@@ -134,7 +134,7 @@ class _ExamScreenState extends State<ExamScreen> {
                         _buildInfoCard(Symbols.stars, 'Max XP', '+200 XP'),
                         _buildInfoCard(Symbols.psychology, 'AI Grading', 'Instant'),
                       ],
-                    ).animate().delay(100.ms).fadeIn(),
+                    ).animate().fadeIn(delay: 100.ms),
                     const SizedBox(height: 32),
                     SizedBox(width: double.infinity, child: ElevatedButton(onPressed: _startExam, child: const Text('Start Mock Exam'))),
                   ],

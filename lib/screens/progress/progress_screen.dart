@@ -38,15 +38,15 @@ class ProgressScreen extends StatelessWidget {
                     const SizedBox(height: 24),
 
                     // Weekly Activity
-                    _buildWeeklyActivity(context, streak, weekLabels).animate().delay(100.ms).fadeIn().slideY(begin: 0.1, end: 0),
+                    _buildWeeklyActivity(context, streak, weekLabels).animate().fadeIn(delay: 100.ms).slideY(begin: 0.1, end: 0),
                     const SizedBox(height: 24),
 
                     // Skill Breakdown
-                    _buildSkillBreakdown(context, skills).animate().delay(150.ms).fadeIn().slideY(begin: 0.1, end: 0),
+                    _buildSkillBreakdown(context, skills).animate().fadeIn(delay: 150.ms).slideY(begin: 0.1, end: 0),
                     const SizedBox(height: 24),
 
                     // Achievements
-                    _buildAchievements(context).animate().delay(200.ms).fadeIn(),
+                    _buildAchievements(context).animate().fadeIn(delay: 200.ms),
                   ],
                 ),
               ),
